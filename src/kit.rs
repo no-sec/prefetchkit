@@ -20,7 +20,7 @@ use libprefetch;
 
 // directory
 pub(crate) fn dir(matches: &clap::ArgMatches, path: &std::path::Path)
-    -> Result<(), Box<std::error::Error>> {
+    -> Result<(), Box<dyn std::error::Error>> {
   let files = std::fs::read_dir(path)?;
 
   let mut pfs = std::vec::Vec::<libprefetch::Prefetch>::new();
@@ -65,7 +65,7 @@ pub(crate) fn dir(matches: &clap::ArgMatches, path: &std::path::Path)
 
 // file
 pub(crate) fn file(matches: &clap::ArgMatches, path: &std::path::Path)
-    -> Result<(), Box<std::error::Error>> {
+    -> Result<(), Box<dyn std::error::Error>> {
   let mut f = super::formatter::Formatter::new();
   f.set_options(matches);
   if let Some(p) = path.to_str() {

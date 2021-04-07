@@ -1,0 +1,21 @@
+[package]
+name = "prefetchkit"
+version = "1.0.2"
+authors = ["Jan Starke <jan.starke@t-systems.com>", "Thomas BAILLEUX <thomas@bailleux.me>"]
+description = "A powerful forensic commandline tool for analysing Microsoft Prefetch Files"
+homepage = "https://github.com/no-sec/prefetchkit"
+readme = "README.md"
+keywords = ["forensic", "prefetch", "command-line"]
+license = "WTFPL"
+repository = "https://github.com/no-sec/prefetchkit.git"
+[dependencies.ansi_term]
+version = "0.11.0"
+
+[dependencies.chrono]
+version = "0.4.0"
+
+[dependencies.clap]
+version = "2.31.1"
+
+[dependencies.libprefetch]
+version = "0.1.1"
